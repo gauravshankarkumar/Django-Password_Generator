@@ -14,14 +14,17 @@
       crossorigin="anonymous"
     />
     <div class="container text-center">
-      <h1>Welcome to {{home}}'s World</h1>
+      <h1>Welcome to <a href="https://www.linkedin.com/in/gauravshankarkumar/"> {{home}}'s</a> World</h1>
+      <br />
+      <img src="https://xp.io/storage/2ybNQeSH.jpg" width="90%" alt="gsk" />
       <br />
       <br />
-      <a href="{% url 'password' %}"class="btn btn-primary">Password Generator Page</a>
+      <a href="{% url 'password' %}" class="btn btn-primary"
+        >Password Generator Page</a
+      >
       <a href="{% url 'about' %}" class="btn btn-info">About Page</a>
-      <br/>
-      <br/>
-      <img src="https://xp.io/storage/2ybNQeSH.jpg" width="90%" alt="gsk">
+      <br />
+      <br />
     </div>
   </body>
 </html>
