@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dl6u%ivfn!df*ayn35ade(6zb%80%*-1ya^!qvu=qhu7acreq*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['gsk-password-generator.herokuapp.com','127.0.0.1']
 
@@ -114,6 +114,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+# SMTP Setup 
+# email setup settings
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'heavycoder.in@gmail.com'
+EMAIL_HOST_PASSWORD = '9421652506'
+EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

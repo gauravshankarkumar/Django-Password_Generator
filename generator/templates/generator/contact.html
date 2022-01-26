@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+    }
+    hr {
+      width: 80%;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    .contact-items {
+      display: flex;
+      margin: 30px auto;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .customer-care,
+    .write-us,
+    .hire-me {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 28%;
+      margin: 30px auto;
+      padding: 35px 15px;
+      border-radius: 15px;
+      text-align: center;
+      min-width: 250px;
+    }
+    .input-message {
+      width: 100%;
+      height: 70px;
+      padding: 2px 15px;
+      margin-top: 10px;
+      display: inline-block;
+      border: 1px solid rgb(241, 8, 8);
+      border-radius: 15px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    .input-to {
+      width: 100%;
+      padding: 2px 15px;
+      margin: 0;
+      display: inline-block;
+      border: 1px solid rgb(241, 8, 8);
+      border-radius: 15px;
+      box-sizing: border-box;
+    }
+    .input-subject {
+      width: 100%;
+      padding: 2px 15px;
+      margin-top: 10px;
+      display: inline-block;
+      border: 1px solid rgb(241, 8, 8);
+      border-radius: 15px;
+      box-sizing: border-box;
+    }
+    .customer-care {
+      height: 250px;
+      box-shadow: 0 15px 15px green;
+      border: 1px solid green;
+    }
+    .write-us {
+      height: 250px;
+      box-shadow: 0 15px 15px red;
+      border: 1px solid red;
+    }
+    .hire-me {
+      height: 250px;
+      box-shadow: 0 15px 15px blue;
+      border: 1px solid blue;
+    }
+    .link {
+      margin: auto;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+    .fa-facebook {
+      background: #3b5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55acee;
+      color: white;
+    }
+    .fa-github {
+      background: #6c7072;
+      color: white;
+    }
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    .fa-instagram {
+      background: #eb5c03;
+      color: white;
+    }
+    p {
+      font-size: 15px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 17px;
+      border-radius: 25px;
+      border: none;
+      margin: 15px auto;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+    }
+    button:hover {
+      color: gray;
+    }
+    #write {
+      background: rgb(187, 15, 15);
+      box-shadow: 0 0 5px black;
+    }
+    #hire {
+      background: blue;
+      box-shadow: 0 0 5px black;
+    }
+    a {
+      font-size: 16px;
+    }
+    .hire-me a {
+      color: blue;
+      text-shadow: 0 0 2px rgba(76, 62, 158, 0.637);
+    }
+  </style>
+  <body>
+    <footer>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <hr />
+        <h2>Have any questions? We'd love to hear from you</h2>
+        <div class="contact-items">
+          <div class="customer-care">
+            <h3>Follow Us</h3>
+            <p>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-github"></a>
+            </p>
+            <p>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            </p>
+          </div>
+          <div class="write-us">
+            <h3>Write Us</h3>
+
+            <form action="" method="post">
+              {% csrf_token %} {{form.useremail}}
+
+              <!-- <input -->
+              <!-- type="email" -->
+              <!-- name="sender" -->
+              <!-- placeholder="Write your Mail ID" -->
+              <!-- class="input-to" -->
+              <!-- /> -->
+              {{form.subject}}
+
+              <!-- <input -->
+              <!-- type="text" -->
+              <!-- name="subject" -->
+              <!-- placeholder="Write your Subject" -->
+              <!-- class="input-subject" -->
+              <!-- /> -->
+              {{form.message}}
+
+              <!-- <textarea -->
+              <!-- name="message" -->
+              <!-- placeholder="Write something.." -->
+              <!-- class="input-message" -->
+              <!-- ></textarea> -->
+              <br />
+              <button onclick="myFunction()" id="write">{{messages}}</button>
+            </form>
+
+            <!-- <a href="./contact-form.html"> <button id="write">Write</button></a>  u-->
+          </div>
+
+          <div class="hire-me">
+            <h3>For Hire Me</h3>
+            <p>Get in touch with me for Hiring</p>
+            <a href="tel:+91-9421652506" cm_dontconvertlink
+              ><button id="hire">Call Me</button></a
+            >
+            <a class="link" href="#">Download Resume</a>
+            <a class="link" href="mailto:gauravshankarkumar@gmail.com"
+              >Email us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
