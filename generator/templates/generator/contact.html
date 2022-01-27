@@ -9,6 +9,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
   </head>
   <style>
     .container {
@@ -36,6 +42,7 @@
       flex-direction: column;
       align-items: center;
       width: 40%;
+      min-height: 330px;
       margin: 30px auto;
       padding: 35px 25px;
       border-radius: 15px;
@@ -89,11 +96,12 @@
     .link {
       margin: auto;
     }
+
     .fa {
       padding: 20px;
-      margin: 0 5px;
+      margin: 5px;
       font-size: 30px;
-      width: 30px;
+      width: 67px;
       text-align: center;
       text-decoration: none;
       border-radius: 50%;
@@ -122,11 +130,11 @@
       font-size: 15px;
     }
     button {
-      padding: 8px 16px;
+      padding: 8px 16px !important;
       font-size: 17px;
       border-radius: 25px;
       border: none;
-      margin: 15px auto;
+      margin: 15px auto !important;
       cursor: pointer;
       color: rgb(255, 255, 255);
     }
@@ -150,6 +158,12 @@
     }
   </style>
   <body>
+    <div style="text-align: center; margin: 20px">
+      <a href="{% url 'home' %}" class="btn btn-warning">Home PAge</a>
+      <a href="{% url 'password' %}" class="btn btn-primary"
+        >Password Generator Page</a
+      >
+    </div>
     <footer>
       <div class="container">
         <h1>Contact Us</h1>
@@ -158,15 +172,37 @@
         <div class="contact-items">
           <div class="customer-care">
             <h3>Follow Us</h3>
-            <p>
-              <a href="#" class="fa fa-linkedin"></a>
-              <a href="#" class="fa fa-github"></a>
-            </p>
-            <p>
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-instagram"></a>
-              <a href="#" class="fa fa-twitter"></a>
-            </p>
+            <div>
+              <p>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/gauravshankarkumar/"
+                  class="fa fa-linkedin"
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/gauravshankarkumar"
+                  class="fa fa-github"
+                ></a>
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/gauravshankarkumar/"
+                  class="fa fa-facebook"
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/gauravshankarkumar/"
+                  class="fa fa-instagram"
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/gauravshankarkr"
+                  class="fa fa-twitter"
+                ></a>
+              </p>
+            </div>
           </div>
           <div class="write-us">
             <h3>Write Us</h3>
@@ -208,12 +244,23 @@
             <a href="tel:+91-9421652506" cm_dontconvertlink
               ><button id="hire">Call Me</button></a
             >
-            <a class="link" href="#">Download Resume</a>
+            <a
+              class="link"
+              target="_blank"
+              href="https://drive.google.com/file/d/1zD47wQAYFLg5swhtG3G5OnYljPIWCXkx/view?usp=sharing"
+              >Download Resume</a
+            >
             <a class="link" href="mailto:gauravshankarkumar@gmail.com"
               >Email us</a
             >
           </div>
         </div>
+        <p>
+          This is a password generator created by
+          <a href="https://github.com/gauravshankarkumar" target="_blank"
+            >Gaurav Shankar Kumar</a
+          >. Enjoy fam!
+        </p>
       </div>
     </footer>
   </body>
