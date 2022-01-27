@@ -8,6 +8,6 @@ class UserSendMail(forms.ModelForm):
         fields = ['subject', 'useremail', 'message']
         widgets = {
             'subject': forms.TextInput(attrs={'placeholder': 'Write your Subject','class':'input-subject'}),
-            'useremail': forms.EmailInput(attrs={'placeholder': 'Write your Mail ID','class':'input-to'}),
-            'message': forms.Textarea(attrs={'placeholder': 'Write your Mail ID','class':'input-message'})
+            'useremail': forms.EmailInput(attrs={'placeholder': 'Write your Mailing Address','class':'input-to'}),
+            'message': forms.Textarea(attrs={'placeholder': 'Write something..','class':'input-message'})
         }

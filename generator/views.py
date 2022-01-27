@@ -58,7 +58,7 @@ def about(request):
                 fail_silently=False,
             )
             mail_form = UserSendMail(request.POST)
-            return render (request,'generator/contact.html', {'messages':'Mail Send Successfully','form':mail_form})
+            return render (request,'generator/contact.html', {'messages':'Mail Send Successfully'})
         
         else:
             mail_form = UserSendMail(request.POST)
